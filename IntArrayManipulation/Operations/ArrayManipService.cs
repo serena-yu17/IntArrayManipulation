@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace IntArrayManipulation.Operations
 {
@@ -8,7 +7,7 @@ namespace IntArrayManipulation.Operations
     /// </summary>
     public static class ArrayManipService
     {
-        static void swap(this int[] inputValues, int index1, int index2)
+        static void Swap(this int[] inputValues, int index1, int index2)
         {
             var temp = inputValues[index1];
             inputValues[index1] = inputValues[index2];
@@ -22,7 +21,7 @@ namespace IntArrayManipulation.Operations
         /// </summary>
         /// <typeparam name="T">Type of the elements in the Span</typeparam>
         /// <param name="inputValues">The input values</param>
-        public static void reverse(int[] inputValues)
+        public static void Reverse(int[] inputValues)
         {
             //On null or empty, do nothing
             if (inputValues == null || inputValues.Length < 2)
@@ -34,7 +33,7 @@ namespace IntArrayManipulation.Operations
             int right = inputValues.Length - 1;
             while (left < right)
             {
-                inputValues.swap(left, right);
+                inputValues.Swap(left, right);
                 left++;
                 right--;
             }
@@ -49,7 +48,7 @@ namespace IntArrayManipulation.Operations
         /// <param name="inputValues">The input values</param>
         /// <param name="removeIndex">The index to be removed at</param>
         /// <returns>The Span that has an element removed</returns>
-        public static int[] deletePart(int[] inputValues, int removeIndex)
+        public static int[] DeletePart(int[] inputValues, int removeIndex)
         {
             //return the original array if input is invalid
             if (inputValues == null || removeIndex >= inputValues.Length)

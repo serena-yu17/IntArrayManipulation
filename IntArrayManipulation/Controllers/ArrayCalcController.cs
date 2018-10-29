@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using IntArrayManipulation.Operations;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IntArrayManipulation.Controllers
@@ -10,13 +7,26 @@ namespace IntArrayManipulation.Controllers
     [ApiController]
     public class ArrayCalcController : ControllerBase
     {
-        // GET api/values
+        // GET api/ArrayCalc/Reverse
         [HttpGet]
-        public ActionResult<string> Reverse()
+        [Route("[action]")]
+        public ActionResult<string> Reverse(int[] productIds)
         {
-            return new string[] { "value1", "value2" };
+            if (productIds == null)
+                return Content("");
+            ArrayManipService.Reverse(productIds);
+            return Content(string.Format("[{0}]", string.Join(",", productIds)));
         }
 
-
+        // GET api/ArrayCalc/DeletePart
+        [HttpGet]
+        [Route("[action]")]
+        public ActionResult<string> DeletePart(int position, int[] productIds)
+        {            
+            var deleted = ArrayManipService.DeletePart(productIds, position);
+            if (deleted == null)
+                return Content("");
+            return Content(string.Format("[{0}]", string.Join(",", deleted)));
+        }
     }
 }
