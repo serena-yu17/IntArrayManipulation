@@ -56,7 +56,7 @@ namespace IntArrayManipulation.Operations
         /// <param name="removeIndex">The index to be removed at</param>
         /// <returns>The Span that has an element removed</returns>
         /// Time Complexity O(n), space complexity O(n)
-        public static int[] DeletePart(int[] inputValues, int removeIndex)
+        public static int[] DeletePart(int[] inputValues, uint removeIndex)
         {
             //return the original array if input is invalid
             if (inputValues == null || removeIndex >= inputValues.Length)

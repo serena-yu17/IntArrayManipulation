@@ -25,9 +25,11 @@ namespace IntArrayManipulation.Controllers
         // GET api/ArrayCalc/DeletePart
         [HttpGet]
         [Route("[action]")]
-        public ActionResult<string> DeletePart(int position, int[] productIds)
+        public ActionResult<string> DeletePart(uint position, int[] productIds)
         {
             //since the position provided is 1-based, use (position - 1) for 0-based arrays
+            if (position == 0)
+                return Content("");              
             var deleted = ArrayManipService.DeletePart(productIds, position - 1);
 
             if (deleted == null)

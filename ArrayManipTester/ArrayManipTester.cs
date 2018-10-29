@@ -1,3 +1,4 @@
+using IntArrayManipulation.Controllers;
 using IntArrayManipulation.Operations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -6,6 +7,8 @@ namespace ArrayManipTester
     [TestClass]
     public class ArrayManipTester
     {
+        ArrayCalcController controller = new ArrayCalcController();
+
         [TestMethod]
         public void reverseTestMethod1()
         {
