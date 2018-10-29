@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace ArrayManipTester
 {
     [TestClass]
-    public class UnitTest1
+    public class ArrayManipTester
     {
         [TestMethod]
         public void reverseTestMethod1()
