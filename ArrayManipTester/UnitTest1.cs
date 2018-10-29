@@ -1,10 +1,10 @@
-using ArrayManipulation.Operations;
+using IntArrayManipulation.Operations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ArrayManipTester
 {
     [TestClass]
-    public class ArrayManipTester
+    public class UnitTest1
     {
         [TestMethod]
         public void reverseTestMethod1()
@@ -83,7 +83,7 @@ namespace ArrayManipTester
         {
             int[] testArr = new int[] { 0 };
             var result = ArrayManipService.deletePart(testArr, 0);
-            CollectionAssert.AreEqual(result, new  int[0]);
+            CollectionAssert.AreEqual(result, new int[0]);
         }
 
         [TestMethod]

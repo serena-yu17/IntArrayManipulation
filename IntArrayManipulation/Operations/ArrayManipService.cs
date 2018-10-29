@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ArrayManipulation.Operations
+namespace IntArrayManipulation.Operations
 {
     /// <summary>
     /// Handles manipulation on int arrays

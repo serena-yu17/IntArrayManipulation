@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntArrayManipulation", "IntArrayManipulation\IntArrayManipulation.csproj", "{436550DC-D6CC-46B9-AB05-B7DF997AB418}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayManipTester", "ArrayManipTester\ArrayManipTester.csproj", "{7A9CFB9A-DFD1-4FB6-A04F-CB4BDD929C2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayManipTester", "ArrayManipTester\ArrayManipTester.csproj", "{C7AB8E1B-55D0-4D65-9701-F64C8D3407BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{436550DC-D6CC-46B9-AB05-B7DF997AB418}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{436550DC-D6CC-46B9-AB05-B7DF997AB418}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{436550DC-D6CC-46B9-AB05-B7DF997AB418}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7A9CFB9A-DFD1-4FB6-A04F-CB4BDD929C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A9CFB9A-DFD1-4FB6-A04F-CB4BDD929C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A9CFB9A-DFD1-4FB6-A04F-CB4BDD929C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A9CFB9A-DFD1-4FB6-A04F-CB4BDD929C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7AB8E1B-55D0-4D65-9701-F64C8D3407BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7AB8E1B-55D0-4D65-9701-F64C8D3407BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7AB8E1B-55D0-4D65-9701-F64C8D3407BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7AB8E1B-55D0-4D65-9701-F64C8D3407BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
