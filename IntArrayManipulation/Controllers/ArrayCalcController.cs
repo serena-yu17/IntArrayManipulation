@@ -14,7 +14,11 @@ namespace IntArrayManipulation.Controllers
         {
             if (productIds == null)
                 return Content("");
+
+            //The array is reversed in place
             ArrayManipService.Reverse(productIds);
+
+            //Format as string
             return Content(string.Format("[{0}]", string.Join(",", productIds)));
         }
 
@@ -25,8 +29,11 @@ namespace IntArrayManipulation.Controllers
         {
             //since the position provided is 1-based, use (position - 1) for 0-based arrays
             var deleted = ArrayManipService.DeletePart(productIds, position - 1);
+
             if (deleted == null)
                 return Content("");
+
+            //Format as string
             return Content(string.Format("[{0}]", string.Join(",", deleted)));
         }
     }

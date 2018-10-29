@@ -7,20 +7,28 @@ namespace IntArrayManipulation.Operations
     /// </summary>
     public static class ArrayManipService
     {
+        /// <summary>
+        /// Swap two values in an array in-place
+        /// </summary>
+        /// <param name="inputValues">The supplied array</param>
+        /// <param name="index1">The first index to be swapped</param>
+        /// <param name="index2">The second index to be swapped</param>
         static void Swap(this int[] inputValues, int index1, int index2)
         {
+            if (inputValues == null || index1 >= inputValues.Length || index2 >= inputValues.Length)
+                return;
             var temp = inputValues[index1];
             inputValues[index1] = inputValues[index2];
             inputValues[index2] = temp;
         }
 
-        //Time complexity O(n), space complexity O(1)
         /// <summary>
         /// To reverse an int array in place. The original Span will be modified. 
         /// If the parameter is null, it will return null.
         /// </summary>
         /// <typeparam name="T">Type of the elements in the Span</typeparam>
         /// <param name="inputValues">The input values</param>
+        /// Time complexity O(n), space complexity O(1)
         public static void Reverse(int[] inputValues)
         {
             //On null or empty, do nothing
@@ -28,7 +36,7 @@ namespace IntArrayManipulation.Operations
             {
                 return;
             }
-            //swap values
+            //swap values from aymmertrical indexes
             int left = 0;
             int right = inputValues.Length - 1;
             while (left < right)
@@ -39,7 +47,6 @@ namespace IntArrayManipulation.Operations
             }
         }
 
-        //Time Complexity O(n), space complexity O(n)
         /// <summary>
         /// Removes an element at the index chosen. The original Span will be modified. 
         /// If the parameter is null, it will return null.
@@ -48,6 +55,7 @@ namespace IntArrayManipulation.Operations
         /// <param name="inputValues">The input values</param>
         /// <param name="removeIndex">The index to be removed at</param>
         /// <returns>The Span that has an element removed</returns>
+        /// Time Complexity O(n), space complexity O(n)
         public static int[] DeletePart(int[] inputValues, int removeIndex)
         {
             //return the original array if input is invalid
@@ -56,6 +64,7 @@ namespace IntArrayManipulation.Operations
                 return inputValues;
             }
 
+            //construct a new List ignoring the removeIndex
             List<int> prepared = new List<int>();
             for (int idx = 0; idx < inputValues.Length; idx++)
             {
