@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ArrayManipulation\ArrayManipulation.csproj" />
+    <ProjectReference Include="..\IntArrayManipulation\IntArrayManipulation.csproj" />
   </ItemGroup>
 
 </Project>
